@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { OnInit } from '@angular/core';
+import { RouterLink } from "@angular/router";
 import { ElementRef } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
@@ -7,10 +8,11 @@ import {MatButtonModule} from '@angular/material/button';
 import { BreakpointObserver, Breakpoints, BreakpointState} from '@angular/cdk/layout';
 import { distinctUntilChanged, tap } from "rxjs";
 import { CommonModule } from '@angular/common';
+import { DatabaseService } from '../../database.service';
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [MatIconModule, MatDividerModule, MatButtonModule, CommonModule],
+  imports: [MatIconModule, MatDividerModule, MatButtonModule, CommonModule, RouterLink,],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })
@@ -25,7 +27,7 @@ export class MenuComponent implements OnInit{
     distinctUntilChanged()
   );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, ) {}
 
   ngOnInit(): void {
     this.breakpoint$.subscribe(() =>

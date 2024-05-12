@@ -1,8 +1,8 @@
 <app-menu  (selectedPage)="changePage($event)"></app-menu>
+
+<!--
 <ng-template [ngIf]="page === 'main'">
-  <div>
     <app-main ></app-main>
-  </div>
 </ng-template>
   <ng-template [ngIf]="page === 'blog'">
     <app-blog> Blog style long form 'chat' interface</app-blog>
@@ -13,3 +13,5 @@
   <ng-template [ngIf]="page === 'register'">
     <app-register> Registration page </app-register>
   </ng-template>
+-->
+<router-outlet></router-outlet>

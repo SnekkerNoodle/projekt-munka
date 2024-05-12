@@ -17,3 +17,10 @@
       </div>
     </form>
 </div>
+
+<div class="messageWall">
+  <li *ngFor="let item of tomb">
+    {{item.topic}}
+    {{item.comment}}
+  </li>
+</div>

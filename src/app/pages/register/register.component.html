@@ -1,5 +1,5 @@
-<div class="registerContainer" fxLayout="row" fxLayoutAlign="center center">
-    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+<div class="registerContainer" fxLayout="row" fxLayoutAlign="center center" > <!--[ngIf]="logged === true"-->
+    <form  [formGroup]="signupForm" (ngSubmit)="onSubmit()" >
         <div>
             <mat-form-field>
                 <mat-label>Email cím</mat-label>

@@ -1,0 +1,7 @@
+.registerContainer{
+    display: block;
+    border: 1px solid gray;
+    margin: 8px;
+    width: 47%;
+    justify-content: center;
+}

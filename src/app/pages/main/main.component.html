@@ -1,0 +1,32 @@
+<div>
+    <h1 [ngClass]="textPlace">Hell Beats</h1>
+    <div [ngClass]="textPlace" [ngStyle]="currentStyles"> <!-- Attribute directives 1#, 2#-->
+        Üdvözöllek a hell beats oldalon! <br>
+        Itt a célünk a pokoli jó dalokról csevegni egy mással, blogolni mondhatni! <br>
+        Minden héten fogjuk váltani a sample-music oldalunkon található dalaink, ezek lesznek a heti témáink! <br>
+    </div>
+    <div [ngClass]="textPlace">
+        <mat-button-toggle-group [(ngModel)]="fontStyle" aria-label="Font Style"> <!-- Attribute directives 3#-->
+            <mat-button-toggle (click)="setCurrentStyles()" value="bold">Bold</mat-button-toggle>
+            <mat-button-toggle (click)="setCurrentStyles()" value="italic">Italic</mat-button-toggle>
+            <mat-button-toggle (click)="setCurrentStyles()" value="underline">Underline</mat-button-toggle>
+        </mat-button-toggle-group>
+        <p>A beállított szöveg az oldaon: {{fontStyle}}</p> 
+    </div>
+    <div [ngClass]="textPlace">
+        <mat-card class="rock-card" [ngClass]="textPlace">
+            <mat-card-header>
+              <div mat-card-avatar class="rock-image"></div>
+              <mat-card-title>Rock and Roll</mat-card-title>
+            </mat-card-header>
+            <img 
+            mat-card-image src="https://static.posters.cz/image/750/rock-hand-ture-up-turn-loud-i23429.jpg" 
+            alt="rock-sign">
+            <mat-card-content>
+              <p>
+                A rock, metál, és minden melle lévő zene megfordúlhat az oldan! Remélem készen ál egyéb mű tisztelőkkel meg bészélni a heti dalokat!
+              </p>
+            </mat-card-content>
+        </mat-card>  
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="registerContainer" fxLayout="row" fxLayoutAlign="center center">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div>
+            <mat-form-field>
+                <mat-label>Email cím</mat-label>
+                <input title="email"
+                formControlName="email"
+                matInput
+                placeholder="user@email.com"
+                [formControl]="email"
+                (blur)="updateErrorMessage()"
+                required>
+                @if (email.invalid) {
+                    <mat-error>{{errorMessage}}</mat-error>
+                }
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Jelszó</mat-label>
+                <input title="password" 
+                formControlName="password"
+                matInput [type]="hide ? 'password' : 'text'" 
+                [formControl]="password"
+                (blur)="updatePasswordMessage()"
+                required>
+                @if (password.invalid) {
+                    <mat-error>{{passwordMessage}}</mat-error> 
+                }
+                <button type="button" mat-icon-button matSuffix (click)="hide = !hide"
+                [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <div>
+            <button type="submit" class="hope" mat-stroked-button>Regisztráció</button>
+        </div>
+    </form>
+</div>
+  

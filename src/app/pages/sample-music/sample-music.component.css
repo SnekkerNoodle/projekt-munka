@@ -1,0 +1,10 @@
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width:128px) and (max-width:900px){
+    mat-grid-list{
+        width: 56%;
+    }
+}

@@ -1,0 +1,67 @@
+header{
+    padding: 10px;
+    height: 64px;
+    background-color: darkred;
+}
+
+.desktop_menu{
+    margin-top: 20px;
+}
+
+.desktop_menu ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+.desktop_menu ul li{
+    list-style-type: none;
+    color: wheat;
+    display: inline-block;
+    font-size: larger;
+    margin-left: 8px;
+}
+.desktop_menu ul li:hover{
+    font-weight: bold;
+    cursor: pointer;
+    color: gold;
+    transition: 0.4s ease-in-out;
+}
+
+@media screen and (min-width:128px) and (max-width:900px){
+    .desktop_menu{
+        position:fixed;
+        right: 0;
+        top: 64px;
+        background-color: darkred;
+        width: 190px;
+        height: 100%;
+    }
+
+    .desktop_menu ul li{
+        display: block;
+        text-align: left;
+        margin: 0px;
+        padding: 10px 0px 10px 26px;
+        border-bottom: 1px solid gold;
+        border-top: 1px solid gold;
+    }
+
+    header{
+        border-bottom: 1px solid gold;  
+    }
+
+    .menuIcon{
+        display: block;
+        color: wheat;
+        padding: 10px;
+        position: fixed;
+        right: 0px;
+    }
+
+    .visible{
+        display: inherit;
+    }
+    .invincible{
+        display: none;
+    }
+}

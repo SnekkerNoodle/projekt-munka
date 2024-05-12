@@ -1,0 +1,17 @@
+.desktop{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.mobile{
+    justify-content: left;
+    text-align: left;
+}
+
+.rock-card {
+  max-width: 400px;
+}
+.rock-image {
+  background-image: url('https://static.posters.cz/image/750/rock-hand-ture-up-turn-loud-i23429.jpg');
+  background-size: cover;
+}

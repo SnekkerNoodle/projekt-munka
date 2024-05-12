@@ -1,0 +1,17 @@
+<header>
+        <div class="row">
+            <div class="menuIcon">
+                <button (click)="menuMove()"mat-icon-button color="wheat" [hidden]="hid">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+            <div class="desktop_menu" [ngClass]="menuPlace"> <!--Attribute directives #1-->
+                <ul>
+                    <li (click)="selectedPage.next('main')">Main</li>
+                    <li (click)="selectedPage.next('blog')">Blog</li>
+                    <li (click)="selectedPage.next('sample-music')">Music Samples</li>
+                    <li (click)="selectedPage.next('register')">Register</li>
+                </ul>
+            </div>
+        </div>
+</header>
